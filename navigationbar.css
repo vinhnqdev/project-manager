@@ -1,0 +1,301 @@
+*{
+	margin: 0;padding: 0;
+}
+html,body{
+	height: 100%;
+}
+
+.wrapper{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: flex;
+	font-family: 'Myriad Pro Regular';
+}
+.left{
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+/*Hidden ScrollBar*/
+/*-webkit- (Chrome, Safari, newer versions of Opera):*/
+.left::-webkit-scrollbar { width: 0 !important }
+/*-moz- (Firefox):*/
+.left { overflow: -moz-scrollbars-none; }
+/*-ms- (Internet Explorer +10):*/
+.left { -ms-overflow-style: none; }
+.right{
+	background: rgba(0,0,0,0.5);
+	height: 100%;
+	width: 0;
+	transition: width 1s;
+}
+
+/*Transition chuyen dong*/
+.chuyendong{
+	width: 60%;
+}
+.dis-none{
+	display: none!important;
+}
+*//*Main*/
+div#navigationbar {
+    width: 100%;
+    font-size: 1em;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    }
+
+
+.nv-container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+ 	/*overflow: hidden;*/
+    display: flex;
+    justify-content: flex-end;
+
+   
+}
+
+/*Icon toggle*/
+.nq-toggler {display: inline-block;cursor: pointer;width: 50px;height: 40px;display: flex;flex-wrap: wrap;align-content: space-evenly;justify-content: center;align-self: center;}
+.icon-bar {
+    width: 45px;
+    height: 8px;
+    background: #0095eb;
+}
+
+
+/*Brand Navigation*/
+a.nv-brand {
+    display: block;
+    text-decoration: none;
+    margin: auto;
+    padding: 18px;
+    font-size: 3em;
+    color: #000;
+}
+a.nv-brand>span.bg-hightlight{
+	color: #0095eb;
+	margin-right: 10px;
+}
+
+/*Navbar*/
+
+.navbar{
+	display: flex;
+	
+}
+div.nv-collapse{
+	display: none;
+	margin-left: auto;
+}
+
+.align-nav{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+
+}
+ul.nv-navbar {
+    list-style-type: none;
+    display: flex;
+    align-content: center;
+}
+
+li.navbar-item {
+    float: left;
+    padding: 20px;
+    border-right: 1px solid gray;
+
+}
+li.navbar-item:last-child {
+  border: none;	
+}
+
+li.navbar-item>a.navbar-link{
+	text-decoration: none;
+	display: block;
+	padding-left: 6px;
+	padding-right: 6px;
+	color: black;
+}
+
+.navbar-list{
+	
+	display: none;
+
+
+}
+
+.navbar-list>i{
+	/*display: inline-block;*/
+	padding: 3px;
+	font-size: 1.7em;
+	cursor: pointer;
+
+	
+}
+
+.navbar-list>button{
+	background: #0095eb;
+	padding: 15px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.content{
+	text-align: justify;
+}
+
+
+/*Media Queries*/
+
+@media only screen and (min-width: 776px){
+	.navbar-list{
+		display:flex;
+		margin: auto 50px;
+		align-items: center;
+	}
+	/*Slider when 776px*/
+	.wrapper div.slider h1{
+		font-size: 6rem;
+	}
+	.wrapper div.slider h2{
+		font-size: 2em;
+	}
+	.wrapper div.slider button{
+		padding: 10px 30px;
+
+	}
+
+	/*Box info responsive*/
+	.section-info{
+		display: flex;
+	}
+	.section-info .box-info{
+		border-right: 1px solid gray;
+	}
+	.section-info .box-info:last-child{
+		border: none;
+	}
+
+
+}
+@media only screen and (min-width: 992px){
+	.nq-toggler{
+		display: none;
+	}
+	
+	.navbar-list{
+		margin: auto 170px;
+		margin-left: 30px;
+	}
+	div.nv-collapse{
+		display: block;
+		
+	}
+	/*Slider when 992px*/
+	.wrapper div.slider h1{
+		font-size: 7rem;
+	}
+	.wrapper div.slider h2{
+		font-size: 2.9em;
+	}
+	.wrapper div.slider button{
+		padding: 15px 35px;
+	}
+}
+
+
+
+/*-------------Sliderr--------------*/
+
+div.slider{
+	width: 100%;
+	height: 600px;
+	background-image: url(slider.jpg);
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	color: white;
+}
+div.slider h1{
+	font-size: 4.1rem;
+	font-family: 'Myriad Pro Light';
+	font-weight: 500;
+	margin: auto 0;
+}
+div.slider h2{
+	font-size: 1.1em;
+	text-align: center;
+	font-family: 'Myriad Pro Light';
+	font-weight: 300;
+	margin-top: 25px;
+	
+	
+}
+.text-sm-slider{
+	height: 200px;
+}
+div.slider button{
+
+	display: inline-block;
+	font-size: .5em;
+	margin: auto 0;
+	padding: 8px 25px;
+	background: #0095eb;
+	cursor: pointer;
+	border-radius: 5px;
+	border-style: none;
+	color: white;
+}
+
+div.slider button:hover{
+	background: #035788;
+}
+
+
+/*---------SECTION INFOR-----------*/
+.section-info{margin-top: 100px;}
+
+.section-info .box-info{
+	width: 100%;
+	height: 300px;
+	
+	margin-bottom: 100px;
+}
+
+.section-info .box-info .box-sm-info{
+	width: 250px;
+	height: 100%;
+	margin:auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.box-info .box-icon{
+	width: 150px;
+	height: 150px;
+	border: 1px solid gray;
+	border-radius: 50%;
+}
+
+.box-sm-info p{
+	text-align: center;
+}
+
+
+
+
